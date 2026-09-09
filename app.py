@@ -28,8 +28,8 @@ try:
 
     if API_KEY:
         genai.configure(api_key=API_KEY)
-        TEXT_MODEL = genai.GenerativeModel("gemini-1.5-flash")
-        VISION_MODEL = genai.GenerativeModel("gemini-1.5-flash")
+        TEXT_MODEL = genai.GenerativeModel("gemini-2.5-flash")
+        VISION_MODEL = genai.GenerativeModel("gemini-2.5-flash")
         DEMO_MODE = False
 except Exception:
     DEMO_MODE = True
@@ -174,7 +174,7 @@ def gemini_chat(user_message, history):
         resp = convo.send_message(prompt)
         return resp.text.strip()
     except Exception as e:
-        return f"(Assistant error, showing demo reply) {demo_bot_reply(user_message, lang)}"
+        return f"(Assistant error: {e} — showing demo reply) {demo_bot_reply(user_message, lang)}"
 
 def demo_bot_reply(user_message, lang):
     msg = user_message.lower()
