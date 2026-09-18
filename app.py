@@ -10,7 +10,7 @@ import streamlit as st
 
 # ── Must be the very first Streamlit call ─────────────────────────────────────
 st.set_page_config(
-    page_title="CropMonitor AI — Smart Farming Dashboard",
+    page_title="CropMonitor AI by devdutt-817",
     page_icon="🌿",
     layout="wide",
     initial_sidebar_state="collapsed",
